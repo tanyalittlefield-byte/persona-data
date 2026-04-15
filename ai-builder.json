@@ -1,0 +1,148 @@
+{
+  "persona": "AI Builder",
+  "version": "1.0",
+  "last_updated": "2026-04-15",
+  "confidence_key": {
+    "high": "3+ sources",
+    "medium": "2 sources",
+    "low": "1 source or inferred"
+  },
+
+  "snapshot": {
+    "one_liner": "Engineers and applied ML practitioners shipping AI-powered product features who need behavioral data to understand whether their AI is actually working.",
+    "archetypes": [
+      "ML/AI engineer embedding LLMs or models into product surfaces",
+      "Full-stack engineer owning an AI feature end-to-end",
+      "AI product lead with hands-on technical depth"
+    ],
+    "company_stage": ["Series A-C", "Growth-stage B2B SaaS", "AI-native startups"],
+    "typical_titles": [
+      "AI/ML Engineer",
+      "Applied AI Engineer",
+      "Staff Engineer (AI features)",
+      "AI Product Engineer",
+      "LLM Engineer"
+    ]
+  },
+
+  "goals": {
+    "confidence": "high",
+    "items": [
+      "Ship AI features that demonstrably improve user outcomes — not just technically functional, but behaviorally validated",
+      "Understand how users actually interact with AI outputs (accept, ignore, edit, abandon)",
+      "Iterate on model behavior based on real usage signals, not just offline evals",
+      "Justify AI investment to product and leadership with usage and impact data",
+      "Reduce time-to-insight between model change and measurable user behavior shift"
+    ]
+  },
+
+  "pain_points": {
+    "confidence": "high",
+    "items": [
+      "Can't connect model performance metrics (latency, accuracy) to downstream user behavior — two separate systems",
+      "No standard way to measure whether AI suggestions are accepted, edited, or ignored",
+      "Feature flags and experiments don't account for AI-specific patterns (e.g., prompt variation, model version)",
+      "Instrumentation is manual and bespoke — every team builds their own event schema for AI interactions",
+      "Slow feedback loop: model ships, behavior changes, but nobody knows why retention moved",
+      "Hard to distinguish 'users don't like the AI' from 'users don't understand the AI exists'"
+    ]
+  },
+
+  "decision_criteria": {
+    "confidence": "medium",
+    "items": [
+      "Speed to instrument and query — they won't use a tool that adds overhead to their iteration cycle",
+      "Ability to define custom events for AI-specific interactions (suggestion shown, accepted, regenerated, etc.)",
+      "Experiment support that handles model A/B tests, not just UI changes",
+      "Team-level adoption: if PM and data science can self-serve, that's a win",
+      "SDK quality and docs — they will read the source code",
+      "Integrates with their existing stack (don't want another data silo)"
+    ]
+  },
+
+  "objections": {
+    "confidence": "medium",
+    "items": [
+      {
+        "objection": "We already have logging / internal dashboards",
+        "response": "Logs tell you what happened. Amplitude tells you why users behaved the way they did — and connects AI feature usage to retention, activation, and monetization outcomes."
+      },
+      {
+        "objection": "We use Mixpanel / Heap / PostHog",
+        "response": "Those tools weren't built for AI feature analysis. Amplitude's behavioral graph and experiment layer are purpose-fit for understanding multi-turn AI interactions at scale."
+      },
+      {
+        "objection": "Our data team owns analytics",
+        "response": "Amplitude is built so engineers can instrument and query without bottlenecking on data team cycles — and data teams get richer signal without building pipelines from scratch."
+      },
+      {
+        "objection": "Too expensive at our stage",
+        "response": "The cost of shipping AI features blind — iterating on gut instead of signal — is higher. Ask what one wasted model sprint costs vs. a quarter of Amplitude."
+      }
+    ]
+  },
+
+  "messaging": {
+    "confidence": "high",
+    "headline": "See exactly how users respond to your AI — and ship the next version faster",
+    "subheader": "Amplitude gives AI builders the behavioral layer to instrument AI interactions, run experiments on model changes, and connect AI feature usage to product outcomes.",
+    "value_pillars": [
+      {
+        "pillar": "Instrument AI interactions, not just pageviews",
+        "detail": "Track suggestion shown, accepted, edited, dismissed — and build a behavioral model of how your AI is actually used."
+      },
+      {
+        "pillar": "Experiment on model behavior, not just UI",
+        "detail": "Run A/B tests on prompt variations, model versions, or feature rollouts — and see behavioral impact in hours, not weeks."
+      },
+      {
+        "pillar": "Connect AI usage to business outcomes",
+        "detail": "Know which AI interactions drive retention, activation, and expansion — so you can prioritize the right model improvements."
+      }
+    ],
+    "proof_preferences": [
+      "Code samples and SDK docs they can evaluate themselves",
+      "Case studies from AI-native companies (not traditional SaaS)",
+      "Concrete metric examples: 'teams using Amplitude reduced AI feature iteration cycles by X%'",
+      "Live demo with their own event schema, not a canned walkthrough"
+    ]
+  },
+
+  "voice_and_tone": {
+    "confidence": "medium",
+    "how_they_talk": [
+      "Direct, technical, skeptical of marketing language",
+      "Respect for specificity — vague claims get tuned out immediately",
+      "Peer-to-peer: they respond to engineers talking to engineers",
+      "Show don't tell: demos and docs beat decks"
+    ],
+    "phrases_that_resonate": [
+      "Behavioral signal from real users",
+      "Instrument once, query forever",
+      "Close the loop between model change and user behavior",
+      "Stop flying blind on AI feature performance"
+    ],
+    "phrases_to_avoid": [
+      "360-degree view of the customer",
+      "Unlock insights",
+      "Empower your team",
+      "Best-in-class",
+      "AI-powered analytics (when describing Amplitude — they want analytics for AI, not analytics with AI)"
+    ]
+  },
+
+  "buying_motion": {
+    "confidence": "medium",
+    "pattern": "Bottom-up: AI Builder instruments a project, gets value, advocates internally. PM and data team get pulled in. Lands as a team or org purchase.",
+    "champion_profile": "The engineer who shipped the AI feature and got asked 'is this actually working?' by their PM or CTO — and had no clean answer",
+    "expansion_trigger": "When AI features ship to more surfaces or teams — each new feature needs its own behavioral instrumentation",
+    "time_to_value": "Should feel fast: instrument in a day, first insights same week. Anything slower breaks the loop."
+  },
+
+  "amplitude_differentiation": {
+    "confidence": "high",
+    "versus_generic_analytics": "Built for behavioral depth, not just event counts — AI builders need funnels, retention curves, and path analysis on AI interactions, not dashboards",
+    "versus_internal_tools": "Amplitude ships in days, scales to billions of events, and gives PM + data science self-serve access without engineering support",
+    "versus_model_observability_tools": "Those tools see the model. Amplitude sees the user. You need both — but user behavior is the ultimate measure of whether AI is working."
+  }
+}
